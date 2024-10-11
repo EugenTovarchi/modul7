@@ -31,12 +31,11 @@ class HomeDelivery : Delivery
 {
     private Address address;
     static decimal Price = 100;
-    public HomeDelivery(Address address, DateTime deliveryTime, Book[] books) //тут надо Цену вносить в скобки ? как она будет отображаться ?
-    {                                                                         // отдельный метод для инфы об этом или в класс static SentIformation ?
+    public HomeDelivery(Address address, DateTime deliveryTime, Book[] books) 
+    {                                                                         
         Price = DeliveryPrice(Price, books);
         TimeOfDelivery = DeliveryTime();
         this.address = address;
-        //id = GetShortId(); как сюда добавить id из метода класса Order<>?
     }
     public override DateTime DeliveryTime()
     {
@@ -110,11 +109,11 @@ internal class Order<TDelivery, TCollectionOfBooks> where TDelivery : Delivery
         Complete
     }
 
-    public TDelivery Delivery; // связь для передачи через Delivery дальше в нужную доставку (только как связь наладить?)
+    public TDelivery Delivery; 
     public TCollectionOfBooks BookCollection; // кол-во книг для передачи в Delivery и расчет в его методе цены
     internal Guid OrderId { get; private set; }
     Customer<int> customer;
-    public string GetShortId() // передать в конструкторы ? или только плясать от заказа ? или в доставка-классы 
+    public string GetShortId() 
     {
         string shortId = OrderId.ToString().Substring(0, 8);
         return shortId;
@@ -131,8 +130,8 @@ internal class Order<TDelivery, TCollectionOfBooks> where TDelivery : Delivery
     internal void PrintInfo()
     {
         Console.WriteLine($"Заказ №{GetShortId} на получателя: {customer.Print}");
-        Console.WriteLine($"Заказ был оформлен: {Delivery.TimeOfDelivery} {SentInformation.MailMessage(Delivery.TimeOfDelivery, Customer.Email)}");
-    }   // как тут получить доступ к свойству Customer.Email ? 
+        Console.WriteLine($"Заказ был оформлен: {Delivery.TimeOfDelivery} {SentInformation.MailMessage(Delivery.TimeOfDelivery, customer.Email)}");
+    }   
 }
 
 public static class Additions
@@ -296,9 +295,9 @@ class Courier <TAge>: Person<TAge>
 
 public static class SentInformation
 {
-    public static void MailMessage(DateTime timeOfDelivery, string email)
+    public static string  MailMessage(DateTime timeOfDelivery, string email)
     {
-        Console.WriteLine($"Ваша посылка будет доставлена: {timeOfDelivery}");
+        return $"Ваша посылка будет доставлена: {timeOfDelivery}";
         //тут должна была быть рассылка дополнительно на почту клиенту со временем доставки и можно смс по номеру клиента
     }
     public static void PickPointCode()
@@ -347,8 +346,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        //Ну и теперь как со всеми этими конструкторами вызвать их и создать нормальную доставку по допустим адрессу курьером ?
-        //Прописать все вызовы и создания обьектов ??
+        Customer<int> customer = new("First", "Last", "1234567890", "1@2.3", 19);
+        Address address = new Address();
+        HomeDelivery homeDelivery = new(address, DateTime.Now, new Book[2]);
+        BookCollection bookColection = new(new Book[2]);
+        Order<HomeDelivery, BookCollection> order = new(homeDelivery, bookColection, customer);
     }
 
 }

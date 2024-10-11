@@ -1,0 +1,15 @@
+C:\Users\Yudjine\source\repos\Myvariant 7unit\bin\Debug\net8.0\Myvariant 7unit.exe
+C:\Users\Yudjine\source\repos\Myvariant 7unit\bin\Debug\net8.0\Myvariant 7unit.deps.json
+C:\Users\Yudjine\source\repos\Myvariant 7unit\bin\Debug\net8.0\Myvariant 7unit.runtimeconfig.json
+C:\Users\Yudjine\source\repos\Myvariant 7unit\bin\Debug\net8.0\Myvariant 7unit.dll
+C:\Users\Yudjine\source\repos\Myvariant 7unit\bin\Debug\net8.0\Myvariant 7unit.pdb
+C:\Users\Yudjine\source\repos\Myvariant 7unit\obj\Debug\net8.0\Myvariant 7unit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yudjine\source\repos\Myvariant 7unit\obj\Debug\net8.0\Myvariant 7unit.AssemblyInfoInputs.cache
+C:\Users\Yudjine\source\repos\Myvariant 7unit\obj\Debug\net8.0\Myvariant 7unit.AssemblyInfo.cs
+C:\Users\Yudjine\source\repos\Myvariant 7unit\obj\Debug\net8.0\Myvariant 7unit.csproj.CoreCompileInputs.cache
+C:\Users\Yudjine\source\repos\Myvariant 7unit\obj\Debug\net8.0\Myvariant 7unit.sourcelink.json
+C:\Users\Yudjine\source\repos\Myvariant 7unit\obj\Debug\net8.0\Myvariant 7unit.dll
+C:\Users\Yudjine\source\repos\Myvariant 7unit\obj\Debug\net8.0\refint\Myvariant 7unit.dll
+C:\Users\Yudjine\source\repos\Myvariant 7unit\obj\Debug\net8.0\Myvariant 7unit.pdb
+C:\Users\Yudjine\source\repos\Myvariant 7unit\obj\Debug\net8.0\Myvariant 7unit.genruntimeconfig.cache
+C:\Users\Yudjine\source\repos\Myvariant 7unit\obj\Debug\net8.0\ref\Myvariant 7unit.dll
